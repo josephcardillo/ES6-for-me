@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+<script>
+const names = ['joe', 'rache', 'micaela'];
+
+const fullNames = names.map(function(name) {
+  return `${name} cardillo`;
+});
+
+console.log(fullNames);
+
+const fullNames2 = names.map((name) => {
+  return `${name} cardillo`;
+});
+
+console.log(fullNames2);
+
+const fullNames3 = names.map(name => {
+  return `${name} cardillo`;
+});
+
+console.log(fullNames3);
+
+const fullNames4 = names.map(name => `${name} cardillo`);
+
+console.log(fullNames4);
+
+const fullNames5 = names.map(() => `hey cardillo!`);
+
+console.log(fullNames5);
+
+// function myFavFood(food) {
+//   console.log(`My favorite food is ${food}!`);
+// }
+
+const myFavFood = (food) => { console.log(`My favorite food is ${food}!`) }
+
+
+</script>
+</body>
+</html>
