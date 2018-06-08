@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+<script>
+
+const competition = 'Van Cliburn';
+const winners = ['John Johnson', 'Sarah Sarita', 'Beverly Beverton'];
+
+// If I want to return an object of the winners I could create an arrow function like this:
+
+// var win = winners.map(function(winner) {
+//   console.log(`the winner is ${winner}`)
+// })
+//
+// var win = winners.map(function(winner, i) {
+//   console.log(`the winner number ${i} is ${winner}`)
+// })
+
+// ES5 version:
+
+const win1 = winners.map(function(winner, i) {
+  return {
+      name: winner,
+      competition: competition,
+      place: i
+  }
+})
+
+
+// winner is my parameter
+// {} is my object
+// passing it two arguments so we need to put parenthesis around it.
+// parenthesis show we're going to return an object literal
+// an implicit return with an object literal
+const win2 = winners.map((winner, i) => ({ name: winner, competition, place: i + 1}) )
+
+const ages = [63, 2, 45, 78, 99, 1, 10];
+
+// old1 would be the new array with .filter()
+const old1 = ages.filter(function(age) {
+  return age >= 60;
+})
+
+const old2 = ages.filter(age => age >= 60)
+console.log(old2);
+
+</script>
+</body>
+</html>
