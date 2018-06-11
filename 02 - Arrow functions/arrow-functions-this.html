@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+<style>
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: darkred;
+  /* border-radius: 8px; */
+  transition: 1s;
+  transition-property: all;
+}
+
+.box.open {
+  width: 500px;
+  height: 500px;
+  background-color: darkgreen;
+  border-radius: 50%;
+}
+
+.box h2 {
+  font-size: 100px;
+  transform:translateX(-1000%);
+  transition: all 0.8s;
+  position: relative;
+  top: 37%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box.text > * {
+  transform: translateX(0%);
+  display: flex;
+  justify-content: center;
+}
+
+
+</style>
+
+  <div class="container">
+    <div class="box">
+      <h2>this</h2>
+    </div>
+  </div>
+
+
+<script>
+
+const box = document.querySelector('.box');
+box.addEventListener('click', function() {
+  // console.log(this);
+  // let first = 'open';
+  // let second = 'text';
+  this.classList.toggle('open');
+
+  // if(this.classList.contains(first)) {
+  //   [first, second] = [second, first];
+  // }
+  //
+  // this.classList.toggle(first);
+  setTimeout(() => {
+    console.log(this);
+    this.classList.toggle('text');
+  }, 500);
+});
+
+
+</script>
+</body>
+</html>
