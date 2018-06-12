@@ -57,21 +57,35 @@
 
 <script>
 
+// const box = document.querySelector('.box');
+// box.addEventListener('click', function() {
+//   console.log(this);
+//   let first = 'open';
+//   let second = 'text';
+//
+//   if(this.classList.contains(first)) {
+//     [first, second] = [second, first];
+//   }
+//
+//   this.classList.toggle(first);
+//   setTimeout(() => {
+//     console.log(this);
+//     this.classList.toggle(second);
+//   }, 500);
+// });
+
+// const box = document.querySelector('.box');
+// box.addEventListener('click', function() {
+//   console.log(this);
+// });
+
 const box = document.querySelector('.box');
 box.addEventListener('click', function() {
-  // console.log(this);
-  // let first = 'open';
-  // let second = 'text';
-  this.classList.toggle('open');
-
-  // if(this.classList.contains(first)) {
-  //   [first, second] = [second, first];
-  // }
-  //
-  // this.classList.toggle(first);
+  console.log(`First this:`);
+  console.log(this);
   setTimeout(() => {
+    console.log(`Second this:`);
     console.log(this);
-    this.classList.toggle('text');
   }, 500);
 });
 
